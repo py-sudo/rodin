@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="ACCOUNT" org.eventb.core.type="ℙ(ACCOUNT)"/>
+<org.eventb.core.poIdentifier name="PERSON" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="L" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="U" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="ACCOUNU" org.eventb.core.predicate="L∈ℤ" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="ACCOUNV" org.eventb.core.predicate="U∈ℕ" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="ACCOUNW" org.eventb.core.predicate="L≤0" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="ACCOUNX" org.eventb.core.predicate="L≤U" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#1"/>
+<org.eventb.core.poIdentifier name="KIND" org.eventb.core.type="ℙ(KIND)"/>
+<org.eventb.core.poIdentifier name="normal" org.eventb.core.type="KIND"/>
+<org.eventb.core.poIdentifier name="savings" org.eventb.core.type="KIND"/>
+<org.eventb.core.poPredicate name="savingt" org.eventb.core.predicate="partition(KIND,{normal},{savings})" org.eventb.core.source="/lab0/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="accounts" org.eventb.core.type="ℙ(ACCOUNT)"/>
+<org.eventb.core.poIdentifier name="balance" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="channel" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="ct" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="owner" org.eventb.core.type="ℙ(ACCOUNT×PERSON)"/>
+<org.eventb.core.poIdentifier name="total" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="accountt" org.eventb.core.predicate="accounts⊆ACCOUNT" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="accountu" org.eventb.core.predicate="owner∈accounts → PERSON" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="accountv" org.eventb.core.predicate="balance∈accounts → ℤ" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="accountw" org.eventb.core.predicate="∀a⦂ACCOUNT·a∈accounts⇒L≤balance(a)∧balance(a)≤U" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="accountx" org.eventb.core.predicate="total≥0" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="accounty" org.eventb.core.predicate="channel∈accounts ⇸ ℕ" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.invariant#9"/>
+<org.eventb.core.poPredicate name="accountz" org.eventb.core.predicate="ct∈ℕ" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.invariant#:"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTaccountt" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="owner'" org.eventb.core.type="ℙ(ACCOUNT×PERSON)"/>
+<org.eventb.core.poIdentifier name="total'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="balance'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="channel'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="accounts'" org.eventb.core.type="ℙ(ACCOUNT)"/>
+<org.eventb.core.poIdentifier name="ct'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPaccountt" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#EVTIDENTaccountt" org.eventb.core.poStamp="9"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTaccountu" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="owner'" org.eventb.core.type="ℙ(ACCOUNT×PERSON)"/>
+<org.eventb.core.poIdentifier name="balance'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="accounts'" org.eventb.core.type="ℙ(ACCOUNT)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="PERSON"/>
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACCOUNT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPaccountu" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#EVTIDENTaccountu" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈ACCOUNT" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈PERSON" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="a∉accounts" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#2|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTaccountv" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="owner'" org.eventb.core.type="ℙ(ACCOUNT×PERSON)"/>
+<org.eventb.core.poIdentifier name="balance'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="accounts'" org.eventb.core.type="ℙ(ACCOUNT)"/>
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACCOUNT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPaccountv" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#EVTIDENTaccountv" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈accounts" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#3|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="balance(a)=0" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="channel∈accounts ∖ {a} ⇸ ℕ" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.event#4|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTaccountw" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="total'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="balance'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACCOUNT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPaccountw" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#EVTIDENTaccountw" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈accounts" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#4|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="v∈ℕ1" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#4|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="balance(a)+v≤U" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#4|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTaccountx" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="total'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="balance'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACCOUNT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPaccountx" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#EVTIDENTaccountx" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈accounts" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="v∈ℕ1" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="L≤balance(a) − v" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#5|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="total − v≥0" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#5|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTaccounty" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="ACCOUNT"/>
+<org.eventb.core.poIdentifier name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="total'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="balance'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="channel'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACCOUNT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPaccounty" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#EVTIDENTaccounty" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈accounts" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="v∈ℕ1" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="L≤balance(a) − v" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#5|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="total − v≥0" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#5|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="b∈accounts" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.event#;|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="b≠a" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.event#;|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="channel∪{b ↦ v}∈accounts ⇸ ℕ" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.event#;|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTaccountz" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="total'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="balance'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="channel'" org.eventb.core.type="ℙ(ACCOUNT×ℤ)"/>
+<org.eventb.core.poIdentifier name="ct'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACCOUNT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPaccountz" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#EVTIDENTaccountz" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈accounts" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#4|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="v∈ℕ1" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#4|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="balance(a)+v≤U" org.eventb.core.source="/lab0/bank0.bum|org.eventb.core.machineFile#bank0|org.eventb.core.event#4|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="a∈dom(channel)" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.event#=|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="channel(a)=v" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.event#=|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="ct − channel(a)∈ℕ" org.eventb.core.source="/lab0/bank1.bum|org.eventb.core.machineFile#bank1|org.eventb.core.event#=|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/lab0/bank2.bpo|org.eventb.core.poFile#bank2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9"/>
+</org.eventb.core.poFile>

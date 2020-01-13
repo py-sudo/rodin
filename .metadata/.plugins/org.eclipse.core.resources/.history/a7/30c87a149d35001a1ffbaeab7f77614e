@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="inv4/WD"/>
+<org.eventb.core.prProof name="inv5/THM"/>
+<org.eventb.core.prProof name="INITIALISATION/inv2/INV"/>
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV"/>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV"/>
+<org.eventb.core.prProof name="open/inv2/INV"/>
+<org.eventb.core.prProof name="open/inv3/INV"/>
+<org.eventb.core.prProof name="open/inv4/INV"/>
+<org.eventb.core.prProof name="close/grd2/WD"/>
+<org.eventb.core.prProof name="close/inv2/INV"/>
+<org.eventb.core.prProof name="close/inv3/INV"/>
+<org.eventb.core.prProof name="close/inv4/INV"/>
+<org.eventb.core.prProof name="deposit/grd3/WD"/>
+<org.eventb.core.prProof name="deposit/grd3/THM"/>
+<org.eventb.core.prProof name="deposit/inv3/INV"/>
+<org.eventb.core.prProof name="deposit/inv4/INV"/>
+<org.eventb.core.prProof name="deposit/act1/WD"/>
+<org.eventb.core.prProof name="withdraw/inv3/INV"/>
+<org.eventb.core.prProof name="withdraw/inv4/INV"/>
+<org.eventb.core.prProof name="withdraw/act1/WD"/>
+</org.eventb.core.prFile>

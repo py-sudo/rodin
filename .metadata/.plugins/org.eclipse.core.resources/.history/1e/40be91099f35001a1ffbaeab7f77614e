@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/lab0/C0.bcc|org.eventb.core.scContextFile#C0" org.eventb.core.source="/lab0/C0_ProB.buc|org.eventb.core.contextFile#C0_ProB|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="C0">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="L∈ℤ" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="U∈ℕ" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="L≤0" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="thm1" org.eventb.core.predicate="L≤U" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#1" org.eventb.core.theorem="true"/>
+<org.eventb.core.scCarrierSet name="ACCOUNT" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(ACCOUNT)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="L" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#," org.eventb.core.type="ℤ"/>
+<org.eventb.core.scCarrierSet name="PERSON" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#+" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="true" name="U" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="C1" org.eventb.core.label="axm1" org.eventb.core.predicate="L=−2" org.eventb.core.source="/lab0/C0_ProB.buc|org.eventb.core.contextFile#C0_ProB|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="C2" org.eventb.core.label="axm2" org.eventb.core.predicate="U=3" org.eventb.core.source="/lab0/C0_ProB.buc|org.eventb.core.contextFile#C0_ProB|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+</org.eventb.core.scContextFile>

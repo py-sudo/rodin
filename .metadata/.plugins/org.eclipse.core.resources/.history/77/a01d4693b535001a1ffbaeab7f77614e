@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="ACCOUNT" org.eventb.core.type="ℙ(ACCOUNT)"/>
+<org.eventb.core.poIdentifier name="PERSON" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="L" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="U" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="ACCOUNU" org.eventb.core.predicate="L∈ℤ" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="ACCOUNV" org.eventb.core.predicate="U∈ℕ" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="ACCOUNW" org.eventb.core.predicate="L≤0" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="ACCOUNX" org.eventb.core.predicate="L≤U" org.eventb.core.source="/lab0/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/lab0/C1.bpo|org.eventb.core.poFile#C1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
+</org.eventb.core.poFile>

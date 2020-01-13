@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="accounts ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="owner ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="balance≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="total ≔ 0" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="C0"/>
+<org.eventb.core.variable name=")" org.eventb.core.comment="set of open accounts" org.eventb.core.identifier="accounts"/>
+<org.eventb.core.invariant name="*" org.eventb.core.label="inv1" org.eventb.core.predicate="accounts ⊆ ACCOUNT"/>
+<org.eventb.core.variable name="+" org.eventb.core.comment="owner of accounts" org.eventb.core.identifier="owner"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="owner ∈ accounts → PERSON"/>
+<org.eventb.core.variable name="-" org.eventb.core.comment="balances of accounts" org.eventb.core.identifier="balance"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="balance ∈ accounts → ℤ"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv4" org.eventb.core.predicate="∀a·a∈accounts⇒(L≤balance(a)) ∧ (balance(a)≤U)"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv5" org.eventb.core.predicate="total ≥ 0"/>
+<org.eventb.core.variable name="1" org.eventb.core.comment="total money in the bank" org.eventb.core.identifier="total"/>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="open">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="a"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="a∈ACCOUNT"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="p∈PERSON"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="a∉accounts"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="accounts ≔ accounts ∪ {a} " org.eventb.core.comment="add a to accounts" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="owner(a) ≔ p" org.eventb.core.comment="set p to the owner of a" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="balance(a) ≔ 0" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="close">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="a"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="a∈accounts"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="balance(a) = 0"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="owner ≔ {a} ⩤ owner" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="balance ≔ {a} ⩤ balance" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="accounts≔ accounts∖{a}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="deposit">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="a"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="v"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="a∈accounts"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="v∈ℕ1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="balance(a) + v ≤ U" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="balance(a) ≔ balance(a)+ v" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="total ≔ total + v" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="withdraw">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="a"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="v"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="a∈accounts"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="v∈ℕ1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="balance(a) ≔ balance(a) − v" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="total ≔ total − v" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="L ≤ balance(a) − v"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
